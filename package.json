@@ -1,0 +1,31 @@
+{
+  "name": "http-beautify",
+  "version": "1.0.0",
+  "description": "An elegant way to make requests with code reuse",
+  "main": "src/index.js",
+  "type": "module",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonio-gustavo/http-beautify.git"
+  },
+  "keywords": [
+    "http",
+    "axios",
+    "js"
+  ],
+  "author": "Antônio Gustavo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonio-gustavo/http-beautify/issues"
+  },
+  "homepage": "https://github.com/antonio-gustavo/http-beautify#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
