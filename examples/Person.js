@@ -1,4 +1,4 @@
-import BaseHttpService from "..src/index.js";
+import BaseHttpService from "../src/index.js";
 import instanceAxios from "./axios.js";
 
 class Person extends BaseHttpService {
