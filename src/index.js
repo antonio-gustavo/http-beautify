@@ -16,9 +16,13 @@ export default class BaseHttpService {
     this.endpoint = String();
     this.relationship = relationship;
     this.instanceAxios = instanceAxios;
-    this.resource = this.constructor.name.toLowerCase();
+    this.resource = this.resourceFormater(this.constructor.name)
     this.generateRelationships();
     this.bindResourcesHTTP();
+  }
+
+  resourceFormater(resource){
+    return resource.replace(/((?<=[a-z\d])[A-Z]|(?<=[A-Z\d])[A-Z](?=[a-z]))/g, '-$1').toLowerCase();
   }
 
   uri() {
