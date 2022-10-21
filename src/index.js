@@ -11,21 +11,16 @@ export default class BaseHttpService {
     delete: "delete",
   };
 
-  constructor(id = String(), relationship, instanceAxios) {
+  constructor(id = String(), relationship, resourceName, instanceAxios) {
     this.id = id ? `/${id}` : String();
     this.endpoint = String();
     this.relationship = relationship;
     this.instanceAxios = instanceAxios;
-    console.log("Default constructor name: ",this.constructor.name)
-    this.resource = this.resourceFormater(this.constructor.name)
-    console.log("Formatted constructor name: ", this.resource)
+    this.resource = resourceName;
     this.generateRelationships();
     this.bindResourcesHTTP();
   }
 
-  resourceFormater(resource){
-    return resource.replace(/((?<=[a-z\d])[A-Z]|(?<=[A-Z\d])[A-Z](?=[a-z]))/g, '-$1').toLowerCase();
-  }
 
   uri() {
     return `${this.resource}${this.id}${this.endpoint}`;
