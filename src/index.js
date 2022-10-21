@@ -16,7 +16,9 @@ export default class BaseHttpService {
     this.endpoint = String();
     this.relationship = relationship;
     this.instanceAxios = instanceAxios;
+    console.log("Default constructor name: ",this.constructor.name)
     this.resource = this.resourceFormater(this.constructor.name)
+    console.log("Formatted constructor name: ", this.resource)
     this.generateRelationships();
     this.bindResourcesHTTP();
   }
