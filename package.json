@@ -1,6 +1,6 @@
 {
   "name": "http-beautify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An elegant way to make requests with code reuse",
   "main": "src/index.js",
   "type": "module",
